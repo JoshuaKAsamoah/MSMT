@@ -25,6 +25,11 @@ plots_*/
 ablation_plots_*/
 MSMT_Ablation_All_*
 MSMT_Ablation_Horizon_*
+msmt_component_*
+msmt_comprehensive_*
+MSMT_Ablation_*
+msmt_ablation_*
+
 
 # OS and editor files
 .DS_Store
@@ -40,7 +45,6 @@ Thumbs.db
 
 # Ignore PDF/PNG figures (if you want to keep repo light)
 *.pdf
-*.png
 
 # Ignore Mac system files
 __MACOSX/
