@@ -54,33 +54,6 @@ PEMS08:
   early_stopping_patience: 100
   memory_size: 4
 
-# Extended Sequence Experiments
-PEMS04_36:
-  data_path: "dataset/PEMS04_36"
-  num_nodes: 307
-  input_len: 36
-  output_len: 36
-  input_dim: 3
-  channels: 128
-  batch_size: 8
-  learning_rate: 0.0008
-  epochs: 400
-  early_stopping_patience: 120
-  memory_size: 8
-
-PEMS08_48:
-  data_path: "dataset/PEMS08_48"
-  num_nodes: 170
-  input_len: 48
-  output_len: 48
-  input_dim: 3
-  channels: 128
-  batch_size: 8
-  learning_rate: 0.0008
-  epochs: 400
-  early_stopping_patience: 120
-  memory_size: 8
-
 # Mobility Datasets
 bike_drop:
   data_path: "dataset/bike_drop"
@@ -107,8 +80,6 @@ taxi_drop:
   epochs: 300
   early_stopping_patience: 80
   memory_size: 4
-
-# Large-scale Regional Data
 
 
 # Default Configuration
