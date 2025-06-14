@@ -1,0 +1,49 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments (if you ever add one)
+env/
+venv/
+ENV/
+
+# Data and model weights (keep only small samples if needed)
+data/
+!data/README.md
+*.pt
+*.h5
+*.zip
+
+# Experiment outputs
+experiments/logs/
+experiments/results/
+test_results/
+logs/
+figs/
+plots_*/
+ablation_plots_*/
+MSMT_Ablation_All_*
+MSMT_Ablation_Horizon_*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+
+# Submission/cluster job files and outputs
+*.pbs
+*.o*
+*.e*
+
+# Ignore compiled objects and binaries
+*.so
+
+# Ignore PDF/PNG figures (if you want to keep repo light)
+*.pdf
+*.png
+
+# Ignore Mac system files
+__MACOSX/
+
+# Git folder (just in case)
+.git/

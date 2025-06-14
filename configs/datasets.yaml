@@ -1,0 +1,130 @@
+# MSMT Dataset Configurations
+# Use these configurations for different datasets
+
+# PEMS Traffic Datasets
+PEMS03:
+  data_path: "dataset/PEMS03"
+  num_nodes: 358
+  input_len: 12
+  output_len: 12
+  input_dim: 3
+  channels: 128
+  batch_size: 16
+  learning_rate: 0.001
+  epochs: 300
+  early_stopping_patience: 100
+  memory_size: 4
+
+PEMS04:
+  data_path: "dataset/PEMS04"
+  num_nodes: 307
+  input_len: 12
+  output_len: 12
+  input_dim: 3
+  channels: 128
+  batch_size: 16
+  learning_rate: 0.001
+  epochs: 500
+  early_stopping_patience: 100
+  memory_size: 4
+
+PEMS07:
+  data_path: "dataset/PEMS07"
+  num_nodes: 883
+  input_len: 12
+  output_len: 12
+  input_dim: 3
+  channels: 128
+  batch_size: 8  # Larger dataset, smaller batch
+  learning_rate: 0.001
+  epochs: 300
+  early_stopping_patience: 80
+  memory_size: 6
+
+PEMS08:
+  data_path: "dataset/PEMS08"
+  num_nodes: 170
+  input_len: 12
+  output_len: 12
+  input_dim: 3
+  channels: 128
+  batch_size: 16
+  learning_rate: 0.001
+  epochs: 500
+  early_stopping_patience: 100
+  memory_size: 4
+
+# Extended Sequence Experiments
+PEMS04_36:
+  data_path: "dataset/PEMS04_36"
+  num_nodes: 307
+  input_len: 36
+  output_len: 36
+  input_dim: 3
+  channels: 128
+  batch_size: 8
+  learning_rate: 0.0008
+  epochs: 400
+  early_stopping_patience: 120
+  memory_size: 8
+
+PEMS08_48:
+  data_path: "dataset/PEMS08_48"
+  num_nodes: 170
+  input_len: 48
+  output_len: 48
+  input_dim: 3
+  channels: 128
+  batch_size: 8
+  learning_rate: 0.0008
+  epochs: 400
+  early_stopping_patience: 120
+  memory_size: 8
+
+# Mobility Datasets
+bike_drop:
+  data_path: "dataset/bike_drop"
+  num_nodes: 250
+  input_len: 12
+  output_len: 12
+  input_dim: 3
+  channels: 96
+  batch_size: 16
+  learning_rate: 0.001
+  epochs: 300
+  early_stopping_patience: 80
+  memory_size: 4
+
+taxi_drop:
+  data_path: "dataset/taxi_drop"
+  num_nodes: 266
+  input_len: 12
+  output_len: 12
+  input_dim: 3
+  channels: 96
+  batch_size: 16
+  learning_rate: 0.001
+  epochs: 300
+  early_stopping_patience: 80
+  memory_size: 4
+
+# Large-scale Regional Data
+
+
+# Default Configuration
+default:
+  data_path: "data/PEMS04"
+  num_nodes: 307
+  input_len: 12
+  output_len: 12
+  input_dim: 3
+  channels: 128
+  batch_size: 16
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  dropout: 0.1
+  epochs: 500
+  early_stopping_patience: 100
+  memory_size: 4
+  print_every: 50
+  device: "cuda:0"

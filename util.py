@@ -91,36 +91,35 @@ def load_dataset(dataset_dir, batch_size, valid_batch_size=None, test_batch_size
 
 
 def MAE_torch(pred, true, mask_value=None):
-    if mask_value != None:
-        mask = torch.gt(true, mask_value)
-        pred = torch.masked_select(pred, mask)
-        true = torch.masked_select(true, mask)
+    if mask_value is not None:
+        mask = (true > mask_value)
+        pred = pred[mask]
+        true = true[mask]
     return torch.mean(torch.abs(true - pred))
 
 
 def MAPE_torch(pred, true, mask_value=None):
-    if mask_value != None:
-        mask = torch.gt(true, mask_value)
-        pred = torch.masked_select(pred, mask)
-        true = torch.masked_select(true, mask)
-    return torch.mean(torch.abs(torch.div((true - pred), true)))
+    if mask_value is not None:
+        mask = (true > mask_value)
+        pred = pred[mask]
+        true = true[mask]
+    return torch.mean(torch.abs((true - pred) / (true + 1e-5)))  # prevent div by 0
 
 
 def RMSE_torch(pred, true, mask_value=None):
-    if mask_value != None:
-        mask = torch.gt(true, mask_value)
-        pred = torch.masked_select(pred, mask)
-        true = torch.masked_select(true, mask)
+    if mask_value is not None:
+        mask = (true > mask_value)
+        pred = pred[mask]
+        true = true[mask]
     return torch.sqrt(torch.mean((pred - true) ** 2))
 
 
 def WMAPE_torch(pred, true, mask_value=None):
-    if mask_value != None:
-        mask = torch.gt(true, mask_value)
-        pred = torch.masked_select(pred, mask)
-        true = torch.masked_select(true, mask)
-    loss = torch.sum(torch.abs(pred - true)) / torch.sum(torch.abs(true))
-    return loss
+    if mask_value is not None:
+        mask = (true > mask_value)
+        pred = pred[mask]
+        true = true[mask]
+    return torch.sum(torch.abs(pred - true)) / torch.sum(torch.abs(true) + 1e-5)
 
 
 def metric(pred, real):
