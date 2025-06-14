@@ -13,6 +13,9 @@ A PyTorch implementation of **Memory-augmented Spatio-temporal Multi-scale Trans
 
 ## 📋 Architecture Overview
 
+### Model Architecture
+![Model Architecture](figures/Traffic_Forecast.png)
+
 MSMT combines several innovative components:
 
 1. **Adaptive Temporal Embedding**: Dynamic time-of-day and day-of-week representations
@@ -177,14 +180,9 @@ MSMT/
 
 ## 📈 Performance
 
-### PEMS Datasets Results
+### Ablation Study Results
+![Ablation Results](figures/MSMT_Ablation_All_Metrics_Horizontal.pdf)
 
-| Dataset | MAE | RMSE | MAPE |
-|---------|-----|------|------|
-| PEMS03  | TBD | TBD  | TBD  |
-| PEMS04  | TBD | TBD  | TBD  |
-| PEMS07  | TBD | TBD  | TBD  |
-| PEMS08  | TBD | TBD  | TBD  | 
 
 *Results to be updated with your experimental findings.*
 
