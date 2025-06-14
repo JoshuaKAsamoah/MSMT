@@ -14,7 +14,7 @@ A PyTorch implementation of **Memory-augmented Spatio-temporal Multi-scale Trans
 ## 📋 Architecture Overview
 
 ### Model Architecture
-![Model Architecture](figures/Traffic_Forecast.png)
+![Model Architecture](figures/Trafffic_Forecast.png)
 
 MSMT combines several innovative components:
 
@@ -180,8 +180,12 @@ MSMT/
 
 ## 📈 Performance
 
+###
+![Model Performance on the Highway datasets](figures/Highway.png)
+![Model Performance on the Urban datasets](figures/Urban.png)
+
 ### Ablation Study Results
-![Ablation Results](figures/MSMT_Ablation_All_Metrics_Horizontal.pdf)
+![Ablation Results](figures/Ablate.png)
 
 
 *Results to be updated with your experimental findings.*
