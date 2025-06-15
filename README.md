@@ -223,10 +223,10 @@ main_pred, fine_pred, coarse_pred, uncertainty = model.output_head(features)
 If you use MSMT in your research, please cite:
 
 ```bibtex
-@article{your_paper_2025,
+@article{X,
   title={Memory-augmented Spatio-temporal Multi-scale Transformer for Enhanced Time Series Forecasting},
-  author={Your Name and Co-authors},
-  journal={Your Journal},
+  author={Joshua Kofi Asamoah, Armstrong Aboah, Blessing Agyei Kyem},
+  journal={X},
   year={2025},
   volume={X},
   pages={XXX-XXX}
